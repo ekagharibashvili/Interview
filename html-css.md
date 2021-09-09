@@ -10,3 +10,16 @@
 
 #### 2. Tags, icluding attributes
 ##### check out link [Html Tags](https://www.w3schools.com/tags/).
+
+#### 3. Types of elements (block, inline, inline-block)
+
+##### block level ელემეტი ყოველთვის იწყება ახალი ხაზიდან. ის ყოველთვის იღებს mთლიან სიგანეს რაც ხელმისაწვდომია(გადაჭიმული მარცხნიდან მარჯვნივ სადამდეც შესაძლებელია). block level ელემენტს აქვს მარჯინი ზემოდან და ქვემოდან რაც არ აქვს inline level ელემენტს.
+##### block level ელემენტებია: 
+##### ![Block level](./assets/block.jpg)
+
+##### inline level ელემენტი არ იწყება ახალი ხაზიდან, inline ელემენტი იღებს იმხელა სიგანეს რაც აუცილებელია. არ შეგვიძლია გავუწეროთ მარჯინი ტოპზე და ბოთთომზე. მას არ შეგვიძლია გავუწეროთ ასევე width და height.
+##### inline level ელემენტებია:
+##### ![inline](./assets/inline.jpg)
+
+##### inline-block  ელემენტს, inline-ისგან გასხვავებით შეგვიძლია გავუწეროთ width და height, ასევე margin/padding ტოპზე და ბოთთომზე.არ იწყება ახალი ხაზიდან. გამოიყენება navigation link-ების შესაქმნელად.
+
