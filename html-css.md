@@ -1,19 +1,3 @@
 #### 1. Structure of HTML page
-
-##### <!DOCTYPE html>
-
-##### <html>
-
-#####    <head>
-
-#####        <title>
-              
-#####        </title>
-
-#####    </head>
-      
-#####    <body>
-          
-#####    </body>
-
-##### </html>
+ 
+ ![Html structure](./assets/html.jpg)
