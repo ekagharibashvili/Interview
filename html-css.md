@@ -42,3 +42,10 @@
 
 #### 6. Units(px, rem, vh and so on)
 ##### [units](https://www.w3schools.com/cssref/css_units.asp)
+
+#### 7. Box-model
+##### CSS box-model არის ყუთი, რომელიც ეკვრის ყველა html ელემენტს. 
+##### Content - სადაც ტექსტი და სურათებია.
+##### padding - ასუფთავებს არეს კონტენტის გარშემო. პადინგი transparent-ია
+##### border - მოთავსებულია პადინგის და კონტენტის გარშემო.
+##### Margin - ასუფთავებს არეს კონტენტის გარეთ. ის არის transparent.
