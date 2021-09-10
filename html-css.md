@@ -39,3 +39,6 @@
 
 #### 5. Display of elements
 ![display](./assets/display.jpg)
+
+#### 6. Units(px, rem, vh and so on)
+##### [units](https://www.w3schools.com/cssref/css_units.asp)
