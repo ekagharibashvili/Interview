@@ -1,6 +1,6 @@
 #### 1. Structure of HTML page
 
- ![Html structure](./assets/html.jpg)
+ ![Html structure](../assets/html.jpg)
 
 ##### Doctype განსაზღვრავს დოკუმენტის ტიპს.
 ##### შემდეგ მოსდევს htlm თეგი, რომელიც შეგვიძლია დავწეროთ სურვილისამებრ, ის შეიძლება შეიცავდეს lang(ენა) ატრიბუტს.
@@ -15,11 +15,11 @@
 
 ##### block level ელემეტი ყოველთვის იწყება ახალი ხაზიდან. ის ყოველთვის იღებს mთლიან სიგანეს რაც ხელმისაწვდომია(გადაჭიმული მარცხნიდან მარჯვნივ სადამდეც შესაძლებელია). block level ელემენტს აქვს მარჯინი ზემოდან და ქვემოდან რაც არ აქვს inline level ელემენტს.
 ##### block level ელემენტებია: 
-##### ![Block level](./assets/block.jpg)
+##### ![Block level](../assets/block.jpg)
 
 ##### inline level ელემენტი არ იწყება ახალი ხაზიდან, inline ელემენტი იღებს იმხელა სიგანეს რაც აუცილებელია. არ შეგვიძლია გავუწეროთ მარჯინი ტოპზე და ბოთთომზე. მას არ შეგვიძლია გავუწეროთ ასევე width და height.
 ##### inline level ელემენტებია:
-##### ![inline](./assets/inline.jpg)
+##### ![inline](../assets/inline.jpg)
 
 ##### inline-block  ელემენტს, inline-ისგან გასხვავებით შეგვიძლია გავუწეროთ width და height, ასევე margin/padding ტოპზე და ბოთთომზე.არ იწყება ახალი ხაზიდან. გამოიყენება navigation link-ების შესაქმნელად.
 
@@ -38,7 +38,7 @@
 ##### დამოკიდებულია იუზერისსქროლის პოზიციაზე. სტიკი პოზიცია რელატიურიდან გადადის fixed პოზიციაში, დამოკიდებულია სქროლის პოზიციაზე. ელემეტი რელატიურია სანამ კიდე ხვდება ვიუპორტს, შემდეგ კი გადადის fixed პოზიციაში. და რჩება დოკუმენტის თავში.
 
 #### 5. Display of elements
-![display](./assets/display.jpg)
+![display](../assets/display.jpg)
 
 #### 6. Units(px, rem, vh and so on)
 ##### [units](https://www.w3schools.com/cssref/css_units.asp)

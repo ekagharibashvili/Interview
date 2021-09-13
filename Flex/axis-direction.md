@@ -1,2 +1,2 @@
 #### 1. Axis, direction
-![flex layout](./assets/axis.jpg)
+![flex layout](../assets/axis.jpg)
