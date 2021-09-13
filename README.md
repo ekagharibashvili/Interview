@@ -1,1 +1,1 @@
-# Web Development Documantation in Georgian
+# Web Development Documentation in Georgian
