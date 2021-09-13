@@ -1,2 +1,2 @@
 # Interview
-RS Interview topics(stage1)
+RS Interview topics.
