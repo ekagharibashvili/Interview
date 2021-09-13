@@ -1,2 +1,1 @@
-# Interview
-RS Interview topics.
+# Web Development Documantation in Georgian
