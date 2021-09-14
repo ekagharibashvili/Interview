@@ -126,7 +126,7 @@
 
 ##### კოდი ამოპრინტავს ველიუებს იმ ელემენტების რომლებიც იქნება დიაგონალზე მასივში.
 
-![!comma operator](..assets/comma.jpg)
+![!comma operator](../assets/comma.jpg)
 
 #### Unary Operator
 
