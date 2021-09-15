@@ -181,3 +181,257 @@ includes(searchString, position) // პოზიცია არის ნებ
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                   String.prototype.endsWith()
+
+// განსაზღვრავს მთავრდება თუ არა სტრიქონი მითითებული სიმბოლოთი. აბრუნებს True ან false-ს.
+const str1 = 'Cats are the best!';
+
+console.log(str1.endsWith('best', 17));
+// expected output: true
+
+const str2 = 'Is this a question';
+
+console.log(str2.endsWith('?'));
+// expected output: false
+
+// სინტაქსი 
+endsWith(searchString)
+endsWith(searchString, length)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                    String.prototype.indexOf()     
+// აბრუნებს ინდექსს საიდანაც იწყება მითითებული სტრინგის ათვლა. თუ არ არსებობს აბრუნებს -1-ს. 
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+const searchTerm = 'dog';
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" from the beginning is ${indexOfFirst}`);
+// expected output: "The index of the first "dog" from the beginning is 40"
+
+console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchTerm, (indexOfFirst + 1))}`);
+// expected output: "The index of the 2nd "dog" is 52"
+
+//სინტაქსი
+indexOf(searchValue)
+indexOf(searchValue, fromIndex)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                      String.prototype.lastIndexOf()
+// ეს მეთოდი ჰგავს indexOf() მეთოდს, განსხვავება ისაა რომ ეს აბრუნებს შეხვედრილი სტრინგის ინდექსს.
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+const searchTerm = 'dog';
+
+console.log(`The index of the first "${searchTerm}" from the end is ${paragraph.lastIndexOf(searchTerm)}`);
+// expected output: "The index of the first "dog" from the end is 52"
+
+// სინტაქსი
+lastIndexOf(searchValue)
+lastIndexOf(searchValue, fromIndex)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                         String.prototype.match()
+// გამოაქვს შედეგი, რომელი ეწინააღმდეგება გადაცემულ რიგექსს
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// expected output: Array ["T", "I"]
+
+// სინტაქსი
+match(regexp)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                         String.prototype.repeat()
+// ქმნის ასლებს სტრინგის გადაცემული რიცხვის მიხედვით, და აბრუნებს ახალ სტრინგს ამ ასლებით შედგენილს.
+const chorus = 'Because I\'m happy. ';
+
+console.log(`Chorus lyrics for "Happy": ${chorus.repeat(3)}`);
+
+// expected output: "Chorus lyrics for "Happy": Because I'm happy. Because I'm happy. Because I'm happy.
+
+// სინტაქსი 
+repeat(count)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                   String.prototype.valueOf()
+// აბრუნებს პრიმიტიულ ველიუს სტრინგ ობიექტიდან.
+const stringObj = new String('foo');
+
+console.log(stringObj);
+// expected output: String { "foo" }
+
+console.log(stringObj.valueOf());
+// expected output: "foo"
+
+// სინტაქსი 
+valueOf()
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                           String.prototype.trim()
+// შლის ცარიელ ადგილებს სტრინგის ორივე ბოლოდან.
+const greeting = '   Hello world!   ';
+
+console.log(greeting);
+// expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// expected output: "Hello world!";
+// სინტაქსი
+// trim()
+String.prototype.trimStart() 
+trimLeft() // დასაწყისიდან
+String.prototype.trimEnd()
+trimRight() // ბოლოდან
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+String.prototype.toLowerCase()
+// სინტაქსი 
+toLowerCase() // აბრუნებს მიწოდებული სტრინგს პატარა ასოებით
+toUpperCase() // აბრუნებს მიწოდებულ სტრინგს დიდი ასოებით.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                           String.prototype.toString()
+// აბრუნებს მითითებული ობიექტის სტრინგს
+const stringObj = new String('foo');
+
+console.log(stringObj);
+// expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// expected output: "foo"
+
+// სინტაქსი
+toString()
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                        String.prototype.substring()
+// აბრუნებს სტრინგის ნაწილს საწყის და ბოლო ინდექსს შორის
+const str = 'Mozilla';
+
+console.log(str.substring(1, 3));
+// expected output: "oz"
+
+console.log(str.substring(2));
+// expected output: "zilla"
+
+// სინტაქსი
+substring(indexStart)
+substring(indexStart, indexEnd)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                       String.prototype.startsWith()
+// განსაზღვრავს იწყება თუ არა მითითებული სიმბოლოებით ან სტრინგით სტრინგი. აბრუნებს True ან false-ს.
+const str1 = 'Saturday night plans';
+
+console.log(str1.startsWith('Sat'));
+// expected output: true
+
+console.log(str1.startsWith('Sat', 3));
+// expected output: false
+
+// სინტაქსი 
+startsWith(searchString)
+startsWith(searchString, position)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                String.prototype.split()
+/// ყოფს სტრინგებს split არამეტრის მიხედვით. მაგალითშია უფრო გარკვევით და აბრუნებს მოცემულ ინდექსზე მდგარ სტრინგს
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words[3]);
+// expected output: "fox"
+
+const chars = str.split('');
+console.log(chars[8]);
+// expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+// სინტაქსი
+split()
+split(separator)
+split(separator, limit)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                              String.prototype.slice()
+// იღებს სტრიქონის მონაკვეთს და აბრუნებს ახალს ძველის მოდიფიკაციის გარეშე.
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+console.log(str.slice(31));
+// expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// expected output: "lazy"
+
+// სინტაქსი
+slice(beginIndex)
+slice(beginIndex, endIndex)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                           String.prototype.search()
+// რეგექსის მიხედვით ახორციელებს ძებნას და აბრუნებს რეგექსთან შესაბამის ინდექსს
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+
+// any character that is not a word character or whitespace
+const regex = /[^\w\s]/g;
+
+console.log(paragraph.search(regex));
+// expected output: 43
+
+console.log(paragraph[paragraph.search(regex)]);
+// expected output: "."
+
+// სინტაქსი
+search(regexp)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                          String.prototype.replace()
+// აბრუნებს ახალ სტრიქონს, რომლის რომელიმე სტრიქონი ჩანაცვლებულია შესაბამისი სტრინგით. ან შეცვლილია რეგექსის მიხედვით.
+const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+console.log(p.replace('dog', 'monkey'));
+// expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+
+
+const regex = /Dog/i;
+console.log(p.replace(regex, 'ferret'));
+// expected output: "The quick brown fox jumps over the lazy ferret. If the dog reacted, was it really lazy?"
+
+// სინტაქსი
+replace(regexp, newSubstr)
+replace(regexp, replacerFunction)
+
+replace(substr, newSubstr)
+replace(substr, replacerFunction)
+
+                                     String.prototype.replaceAll()
+// ამით კი სტრინგში არსებული ყველა შესაბამისი სტრიქონი ჩანაცვლებული იქნება ახალით. დააბრუნებს ახალ სტრინგს.
+const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+console.log(p.replaceAll('dog', 'monkey'));
+// expected output: "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+
+
+// global flag required when calling replaceAll with regex
+const regex = /Dog/ig;
+console.log(p.replaceAll(regex, 'ferret'));
+// expected output: "The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?"
+
+// სინტაქსი
+replaceAll(regexp, newSubstr)
+replaceAll(regexp, replacerFunction)
+
+replaceAll(substr, newSubstr)
+replaceAll(substr, replacerFunction)
+
+
+
+
