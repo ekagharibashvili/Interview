@@ -207,6 +207,201 @@ console.log(Object.getPrototypeOf(object1) === prototype1);
 // expected output: true
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.is()
+// განსაზღვრავს ორი მნიშნელობა არის თუ არა ერთი და იგივე მნიშვნელობის
+Object.is(value1, value2);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Object.isExtensible()
+
+// განსაზღვრავს ობიექტი არის თუ არა გაფართოებადი ანუ შეუძლია თუ არა ახალი ფროფერთიების დამატება.
+const object1 = {};
+
+console.log(Object.isExtensible(object1));
+// expected output: true
+
+Object.preventExtensions(object1);
+
+console.log(Object.isExtensible(object1));
+// expected output: false
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.isFrozen()
+// განსაზღვრავს ობიექტის არის თუ არა გაყინული
+const object1 = {
+  property1: 42
+};
+
+console.log(Object.isFrozen(object1));
+// expected output: false
+
+Object.freeze(object1);
+
+console.log(Object.isFrozen(object1));
+// expected output: true
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Object.isSealed()
+// გამოაქვს ობიექტი არის თუ არა დალუქული
+const object1 = {
+  property1: 42
+};
+
+console.log(Object.isSealed(object1));
+// expected output: false
+
+Object.seal(object1);
+
+console.log(Object.isSealed(object1));
+// expected output: true
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.keys()
+// აბრუნებს ობიექტის ფროფერთიების მასივს
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.keys(object1));
+// expected output: Array ["a", "b", "c"]
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.preventExtensions()
+// ხელში უშლის ობიექტში ახალი მეთოდების დამატებას.
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, 'property1', {
+    value: 42
+  });
+} catch (e) {
+  console.log(e);
+  // expected output: TypeError: Cannot define property property1, object is not extensible
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.seal()
+// ლუქავს ობიექტს ამიტომ ფროფერთიების შეცვლა არ შეიძლება, მაგრამ ვალიუების კი.
+const object1 = {
+  property1: 42
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// expected output: 33
+
+delete object1.property1; // cannot delete when sealed
+console.log(object1.property1);
+// expected output: 33
+Object.seal(obj)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.setPrototypeOf()
+
+// ადგენს განსაზღვრული ობიექტის პროტოტიპს.
+// სინტაქსი
+Object.setPrototypeOf(obj, prototype)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.values()
+// აბრუნებს ფროფერთიების მნიშვნელობების მასივს
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false
+};
+
+console.log(Object.values(object1));
+// expected output: Array ["somestring", 42, false]
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.prototype.constructor
+// აბრუნებს რეფერენსს ობიექტის კონსტრუქტორის ფუნქციაზე რომელიც შექმინილია ინსტანს ობიექტზე
+let o = {}
+o.constructor === Object // true
+
+let o = new Object
+o.constructor === Object // true
+
+let a = []
+a.constructor === Array // true
+
+let a = new Array
+a.constructor === Array // true
+
+let n = new Number(3)
+n.constructor === Number // true
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.prototype.hasOwnProperty()
+// აბრუნებს ლოგიკურ ჩანაწერს ანუ აქვს თუ არაქვს ობიექტს მითითებული ფროფერთი.
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty('property1'));
+// expected output: true
+
+console.log(object1.hasOwnProperty('toString'));
+// expected output: false
+
+console.log(object1.hasOwnProperty('hasOwnProperty'));
+// expected output: false
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.prototype.isPrototypeOf()
+// ამოწმებს არის თუ არა ობიექტსი სხვა ობიექტის პროტოტიპის ჯაჭვში.
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// expected output: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// expected output: true
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.prototype.toString()
+// აბრუნებს სტრინგს რომელიც წარმოადგენს ობიექტს
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog('Gabby');
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// expected output: "Gabby"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.prototype.valueOf()
+
+// აბრუნებს პრიმიტიულ ვალიუს სპეციფიური ობიექტის
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function() {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// expected output: 7
 
 
 
