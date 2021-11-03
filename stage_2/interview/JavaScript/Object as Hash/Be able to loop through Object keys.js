@@ -17,5 +17,5 @@ for (const [key, value] of Object.entries(obj)) {
     console.log(key, value);
 }
 
-/* Both Object.keys() and Object.entries() iterate properties 
+/* Both Object.keys() and Object.entries() iterate properties
 in the same order as a for...in loop but ignore the prototype chain. Only the object's own enumerable properties are iterated. */
