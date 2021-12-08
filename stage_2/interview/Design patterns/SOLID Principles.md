@@ -51,3 +51,26 @@
 ### that derived classes extend the base class without changing behavior.
 
 ### Following this principle helps to avoid unexpected results of changes, avoid lots of issues during updates and extensions.
+
+
+
+# Interface Segregation Principle
+### The general idea of interface segregation principle is that it's better to have a lot of smaller interfaces than a few bigger ones. Martin explains this principle by advising, "Make fine grained interfaces that are client-specific. Clients should note be forced to implement interfaces they do not use".
+### For software engineers, this means that you don't want to just start with an existing interface and add new methods, Instead, start by building a new interface and the let your class implement multiple interfaces as needed.
+### Smaller interfaces mean that developers should have a preference for composition over inheritance and for decoupling over coupling.
+### According to this principle, engineers should work to have many-specific interfaces, avoiding the temptation of having one big, general-purpose interface.
+
+
+
+# Dependency Inversion Principle
+### This principle offers a way to decouple software modules. Simply put, dependency inversion principle means that developers should "depend on abstractions, not on concretions".
+### Martin further explains this principle by asserting that, "high level modules should not depend upon low level modules. Both should depend on abstractions.
+### "Further," abstractions should not depend on details. Details should depend upon abstractions".
+### One popular way to comply with this principle is through the use of a dependency inversion pattern, although this method is not the only way to do so.
+### Whatever method you choose to utilize, finding a way to utilize this principle will make your code more flexible, agile, and reusable.
+
+# Conslusion 
+### implementing SOLID design principles during development will lead to systems that are more maintainable, scalable, testable, and reusable.
+### In the current environment, these principles are used globally by engineers. As a result, to create good code and to use design principles that are competitive while meeting industry standards, it's essentile to utilize these principles.
+
+### While implementing these principles can feel overwhelming at first, regularly working with them and understanding the difference between code that compiles with the principles and code that does not will help to make good design processes easier and more efficient.  
