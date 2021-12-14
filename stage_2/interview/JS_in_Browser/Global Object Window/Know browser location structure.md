@@ -2,7 +2,7 @@
 ### The Location interface represents the location(URL) of the object  it is linked to.
 ### Changes done on it are reflected on the object it relates to.
 ### Both the Document and Window interface have such a linked Location, accesible via Document.location and Window.location respectively.
-![location](.../assets/location2.jpg)
+![location](../../assets/location2.jpg)
 
 #### Location.origin - Read only
 #### Returns a USVString containing the canonical form of the origin of the specific location.
