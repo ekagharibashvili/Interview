@@ -1,0 +1,1 @@
+### The client's browser name can be found by using navigator. appName.
