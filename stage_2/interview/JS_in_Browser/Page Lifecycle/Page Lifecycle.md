@@ -1,0 +1,2 @@
+[Understanding DOM, CSSOM, Render Tree, Layout, and Painting.](https://medium.com/weekly-webtips/understand-dom-cssom-render-tree-layout-and-painting-9f002f43d1aa)
+[repaint and reflow](https://medium.com/swlh/what-the-heck-is-repaint-and-reflow-in-the-browser-b2d0fb980c08)
