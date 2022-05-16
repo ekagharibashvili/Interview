@@ -4,7 +4,8 @@
 ```js
 
 let arr = [1, 2, 3]
-arr.length => 3
+// arr.length => 3
 
 ```
-<h3>Know several options how to create array</h3>
+
+
