@@ -61,7 +61,7 @@ var empty = [];
 empty.length // prints 0, empty array  
 ```
 
-<h4>sparse array</h4>
+<h4><i>sparse array</i></h4>
 
 ```js
 var animals = ['cat', 'dog', , 'monkey']; // animals is sparse  
