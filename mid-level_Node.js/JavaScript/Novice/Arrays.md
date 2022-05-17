@@ -45,3 +45,29 @@ const listC = new Array(-100) //negative sign
 // RangeError: Invalid array length
 
 ```
+
+<h3>Know how Array length property works</h3>
+<p>array length property works with dense and sparse arrays. With dense arrays it counts exact elements, but in sparse array it also counts empty paces: Examples below</p>
+<h4><i>dense array</i></h4>
+
+```js
+var fruits = ['orange', 'apple', 'banana']; //fruits is a dense array  
+fruits.length // prints 3, the real count of elements
+
+fruits.push('mango');  
+fruits.length // prints 4, one element was added
+
+var empty = [];  
+empty.length // prints 0, empty array  
+```
+
+<h4>sparse array</h4>
+
+```js
+var animals = ['cat', 'dog', , 'monkey']; // animals is sparse  
+animals.length // prints 4, but real number of elements is 3
+
+var words = ['hello'];  
+words[6] = 'welcome'; //the highest index is 6. words is sparse  
+words.length //prints 7, based on highest index 
+```
