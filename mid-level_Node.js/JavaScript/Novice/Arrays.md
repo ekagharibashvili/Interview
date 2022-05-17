@@ -24,3 +24,24 @@ console.log(fruits.length);
 const fruits = "Apple, Banana".split(", ");
 console.log(fruits.length);
 ```
+
+<h3>Array length</h3>
+<p>length is a property which indicates number of element in the array, include empty elements, we can easily change array length if this property is writable or configurable. The value of the property can  be zero to 2^32 and it is positive number</p>
+
+```js
+const listA = [1,2,3];
+const listB = new Array(6);
+
+console.log(listA.length);
+// 3
+
+console.log(listB.length);
+// 6
+
+listB.length = 4294967296; //2 to the 32nd power = 4294967296
+// RangeError: Invalid array length
+
+const listC = new Array(-100) //negative sign
+// RangeError: Invalid array length
+
+```
