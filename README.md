@@ -1,4 +1,4 @@
-# Web Development Documentation 
+# JavaScript Language
 
 ## JavaScript
 ### [Novice](https://ekagharibashvili.github.io/Interview/mid-level_Node.js/JavaScript/Novice/Novice)

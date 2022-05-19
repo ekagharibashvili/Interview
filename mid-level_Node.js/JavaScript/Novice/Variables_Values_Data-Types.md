@@ -10,3 +10,9 @@ d = 1; //with nothing
 
 <h3>Values - Know how to assign values to variables</h3>
 <p>In javascript, the equal sign(=) is an assignment operator, not an "equal to". The "equal to" operator is written like "==" </p>
+
+
+<h3>Literals - Know basic String, Number, Object, Array literals</h3>
+<p><b>String literal</b> is zero or more characters enclosed in double(") or single(') quotes. 
+<b>Numeric literals</b> include integer literals in different bases as well as floating-point literals in base-10. <b></b></p>
+
